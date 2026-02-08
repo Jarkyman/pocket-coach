@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PocketCoach - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#18181b",
+                        "teal-soft": "#5e898d",
+                        "charcoal": "#101818"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>/* Grainy texture effect to mimic organic paper/noise */
+.grain-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDEzRk6bj1ru6pwYZ_-yts3VEkNebJ_ARuu9jcRp1hWDDIZBzL_6NQD_Qz4HhLEZaVGm7sFmAQfVL89HybQ2uEtCzE0TQNGwv-_YM7lHxULHWd7vMdcrHD9q31yiTUnz4cNPZEZ0W9LimvTvcTsDN_tWLN2aPUkiCCBohsqC1M8qj8HooaO2l6CVmUD4rCKkMmEkzbHH8bvZF4roPssDx2fOLyK5VXTmElHlKM-wZIBpaMIQnl0MxaRIu_14JHXAQ_YNfxFsOO5ZRM)
+    }
+/* Custom soft shadow for the primary button */
+.btn-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 108, 117, 0.25)
+    }
+.hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 108, 117, 0.05) 0%, transparent 70%)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased overflow-hidden">
+<!-- Main Container -->
+<div class="relative flex flex-col min-h-screen w-full max-w-md mx-auto overflow-hidden">
+<!-- Texture & Background Visuals -->
+<div class="grain-overlay"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<!-- Top Navigation -->
+<header class="relative z-10 flex items-center justify-end px-6 pt-12 pb-4">
+<button class="text-teal-soft dark:text-teal-soft/80 text-sm font-semibold tracking-wider uppercase transition-opacity hover:opacity-70">
+                Restore
+            </button>
+</header>
+<!-- Main Content Area -->
+<main class="relative z-10 flex flex-col flex-1 px-8 pt-12 text-center items-center">
+<!-- Abstract Focus Graphic -->
+<div class="mb-12 w-48 h-48 relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
+<!-- This acts as a minimalist geometric anchor -->
+<div class="relative w-32 h-32 border-[0.5px] border-primary/20 rounded-full flex items-center justify-center">
+<div class="w-16 h-16 border-[1px] border-primary/40 rounded-full flex items-center justify-center">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Typography Block -->
+<div class="max-w-[300px]">
+<h1 class="text-charcoal dark:text-white text-[44px] font-extrabold leading-none tracking-tight mb-6">
+                    PocketCoach
+                </h1>
+<p class="text-charcoal/70 dark:text-white/60 font-body text-lg leading-relaxed px-2">
+                    Minimalist AI coaching for <span class="text-primary font-medium">focus</span>, clarity, and better decisions.
+                </p>
+</div>
+</main>
+<!-- Footer Actions -->
+<footer class="relative z-10 px-8 pb-16 pt-8">
+<div class="flex flex-col gap-4">
+<button class="btn-shadow w-full bg-primary hover:bg-primary/95 text-white h-16 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="text-lg font-bold tracking-tight">Get started</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<p class="text-[11px] text-charcoal/40 dark:text-white/30 text-center px-6 leading-normal font-body">
+                    By continuing, you agree to our Terms of Service and Privacy Policy. Built for intentional living.
+                </p>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-6"></div>
+</footer>
+<!-- Decorative subtle shapes -->
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute top-1/4 -right-12 w-48 h-48 bg-teal-soft/5 rounded-full blur-3xl"></div>
+</div>
+</body></html>

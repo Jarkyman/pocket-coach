@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Start Your Way - AI Coaching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#18181b",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 108, 117, 0.08);
+        }
+        .card-inner-shadow {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101818] antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden pb-12">
+<!-- TopAppBar -->
+<div class="flex items-center bg-transparent p-6 pb-2 justify-between">
+<div class="text-[#101818] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 soft-shadow" data-icon="ArrowBack">
+<span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span>
+</div>
+<h2 class="text-[#101818] dark:text-white text-sm font-semibold leading-tight tracking-wider uppercase flex-1 text-center pr-10">Start Your Way</h2>
+</div>
+<!-- Headline & Subtext -->
+<div class="px-8 pt-12 pb-8">
+<h3 class="text-[#101818] dark:text-white tracking-tight text-3xl font-extrabold leading-[1.15] text-left pb-4">
+                How would you <br/>like to start?
+            </h3>
+<p class="text-[#5e898d] dark:text-zinc-400 text-base font-normal leading-relaxed text-left max-w-[280px]">
+                Choose the path that fits your current headspace.
+            </p>
+</div>
+<!-- Cards Container -->
+<div class="flex flex-col gap-6 px-6">
+<!-- Card 1: Pick a Coach (Recommended) -->
+<div class="group relative flex flex-col items-stretch justify-start rounded-xl p-6 bg-white dark:bg-zinc-900 soft-shadow border border-white dark:border-zinc-800 transition-all active:scale-[0.98]">
+<div class="flex justify-between items-start mb-6">
+<div class="flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<span class="bg-primary/10 text-primary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Recommended</span>
+</div>
+<div>
+<p class="text-[#101818] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Pick a Coach</p>
+<p class="text-[#5e898d] dark:text-zinc-400 text-sm font-normal leading-normal mt-1">Connect with a specialized AI mentor.</p>
+</div>
+<div class="mt-6 flex justify-end">
+<div class="flex size-10 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Pick a Topic (Fast Start) -->
+<div class="group relative flex flex-col items-stretch justify-start rounded-xl p-6 bg-white dark:bg-zinc-900 soft-shadow border border-white dark:border-zinc-800 transition-all active:scale-[0.98]">
+<div class="flex justify-between items-start mb-6">
+<div class="flex size-14 items-center justify-center rounded-xl bg-primary/5 text-primary/60">
+<span class="material-symbols-outlined text-[32px]">lightbulb</span>
+</div>
+<span class="bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">Fast Start</span>
+</div>
+<div>
+<p class="text-[#101818] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Pick a Topic</p>
+<p class="text-[#5e898d] dark:text-zinc-400 text-sm font-normal leading-normal mt-1">Focus on a specific goal or challenge.</p>
+</div>
+<div class="mt-6 flex justify-end">
+<div class="flex size-10 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-[#101818] dark:text-white">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Create your own (Pro/Locked) -->
+<div class="group relative flex flex-col items-stretch justify-start rounded-xl p-6 bg-white/50 dark:bg-zinc-900/50 soft-shadow border border-dashed border-zinc-200 dark:border-zinc-700 transition-all opacity-80">
+<div class="flex justify-between items-start mb-6">
+<div class="flex size-14 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-400">
+<span class="material-symbols-outlined text-[32px]">add_circle</span>
+</div>
+<div class="flex items-center gap-1.5 bg-zinc-800 text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+<span>Pro</span>
+</div>
+</div>
+<div>
+<p class="text-zinc-500 dark:text-zinc-400 text-xl font-bold leading-tight tracking-[-0.015em]">Create Your Own</p>
+<p class="text-zinc-400 dark:text-zinc-500 text-sm font-normal leading-normal mt-1">Design a custom coach tailored to you.</p>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="flex px-5 h-10 items-center justify-center rounded-full bg-zinc-800 text-white text-xs font-bold tracking-widest uppercase">
+                        Unlock
+                    </button>
+</div>
+</div>
+</div>
+<!-- Extra spacing for bottom visual balance -->
+<div class="h-10"></div>
+<!-- Bottom Tab Bar Mockup (Minimal) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-8 px-8 py-4 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-full soft-shadow border border-white/20">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="material-symbols-outlined text-zinc-300">chat_bubble</span>
+<span class="material-symbols-outlined text-zinc-300">grid_view</span>
+<span class="material-symbols-outlined text-zinc-300">settings</span>
+</div>
+</div>
+</body></html>

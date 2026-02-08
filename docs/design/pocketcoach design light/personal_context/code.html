@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#006c75",
+                "background-light": "#fbfaf9",
+                "background-dark": "#18181b",
+              },
+              fontFamily: {
+                "display": ["Epilogue", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dae6e7;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101818] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Top App Bar / Progress -->
+<div class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-4">
+<div class="flex items-center justify-between pb-4">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-[#101818] dark:text-white">arrow_back_ios_new</span>
+</button>
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">Step 10 of 10</h2>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</div>
+<div class="flex flex-col gap-2 pb-4">
+<div class="flex justify-between items-end">
+<p class="text-[10px] font-bold uppercase tracking-tighter opacity-50 dark:text-white">Onboarding Complete</p>
+<p class="text-[10px] font-bold dark:text-white">100%</p>
+</div>
+<div class="h-1.5 w-full rounded-full bg-primary/10 dark:bg-white/10">
+<div class="h-full rounded-full bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-col px-6 pt-4 pb-32">
+<!-- Headline Section -->
+<div class="mb-8">
+<h1 class="text-[#101818] dark:text-white text-[32px] font-black leading-tight tracking-tight">
+                    What matters <br/>most to you?
+                </h1>
+<p class="mt-2 text-[#5e898d] dark:text-zinc-400 text-base leading-relaxed">
+                    Personalizing your experience helps our AI coaches provide deeper focus and clarity tailored to your life.
+                </p>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-6">
+<!-- Goals Field -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">target</span>
+<label class="text-[#101818] dark:text-white text-sm font-bold uppercase tracking-wider">Your Goals</label>
+</div>
+<div class="group relative transition-all duration-200 focus-within:ring-2 focus-within:ring-primary/20 rounded-xl">
+<textarea class="form-input flex w-full resize-none overflow-hidden rounded-xl border border-[#dae6e7] dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 text-[#101818] dark:text-white placeholder:text-[#5e898d]/60 focus:border-primary focus:ring-0 min-h-[120px] text-base leading-relaxed transition-shadow" placeholder="e.g., Build a sustainable creative habit, scale my business by 20%..."></textarea>
+</div>
+</div>
+<!-- Values Field -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+<label class="text-[#101818] dark:text-white text-sm font-bold uppercase tracking-wider">Your Values</label>
+</div>
+<div class="group relative transition-all duration-200 focus-within:ring-2 focus-within:ring-primary/20 rounded-xl">
+<textarea class="form-input flex w-full resize-none overflow-hidden rounded-xl border border-[#dae6e7] dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 text-[#101818] dark:text-white placeholder:text-[#5e898d]/60 focus:border-primary focus:ring-0 min-h-[120px] text-base leading-relaxed transition-shadow" placeholder="e.g., Integrity, Curiosity, Freedom, Radical Honesty..."></textarea>
+</div>
+</div>
+<!-- Challenges Field -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl">extension</span>
+<label class="text-[#101818] dark:text-white text-sm font-bold uppercase tracking-wider">Current Challenges</label>
+</div>
+<div class="group relative transition-all duration-200 focus-within:ring-2 focus-within:ring-primary/20 rounded-xl">
+<textarea class="form-input flex w-full resize-none overflow-hidden rounded-xl border border-[#dae6e7] dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 text-[#101818] dark:text-white placeholder:text-[#5e898d]/60 focus:border-primary focus:ring-0 min-h-[120px] text-base leading-relaxed transition-shadow" placeholder="e.g., Information overload, lack of focus, fear of failure..."></textarea>
+</div>
+</div>
+<!-- Toggle Section -->
+<div class="mt-4 flex items-center justify-between rounded-2xl bg-primary/5 dark:bg-white/5 p-4 border border-primary/10 dark:border-white/10">
+<div class="flex flex-col gap-0.5">
+<p class="text-sm font-bold text-[#101818] dark:text-white">Apply context globally</p>
+<p class="text-xs text-[#5e898d] dark:text-zinc-400">Share this context across all coaches.</p>
+</div>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox" value=""/>
+<div class="peer h-6 w-11 rounded-full bg-gray-200 dark:bg-zinc-700 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Actions -->
+<div class="fixed bottom-0 left-0 right-0 mx-auto max-w-[430px] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl border-t border-gray-100 dark:border-zinc-800 p-6 flex flex-col gap-3">
+<button class="flex w-full items-center justify-center rounded-xl bg-primary py-4 text-center text-base font-bold text-white shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+                Continue
+            </button>
+<button class="flex w-full items-center justify-center rounded-xl py-2 text-center text-sm font-semibold text-[#5e898d] dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors">
+                I'll do this later
+            </button>
+<!-- iOS Home Indicator Space -->
+<div class="h-4"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Library - PocketCoach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#18181b",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#101818] dark:text-[#fbfaf9] min-h-screen">
+<div class="relative max-w-md mx-auto min-h-screen flex flex-col pb-24">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="text-[#101818] dark:text-white text-3xl font-extrabold leading-tight tracking-tight">Good evening</h2>
+<p class="text-[#5e898d] dark:text-[#a1a1aa] text-sm font-medium">Ready for some clarity?</p>
+</div>
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 shadow-sm border border-[#f0f4f5]/50">
+<span class="material-symbols-outlined text-[#101818] dark:text-white text-[22px]">search</span>
+</div>
+</div>
+</header>
+<!-- Filter Chips Carousel -->
+<div class="px-6 py-4">
+<div class="flex gap-3 overflow-x-auto no-scrollbar py-2">
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-primary px-6">
+<p class="text-white text-sm font-semibold">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 px-6 border border-zinc-100 dark:border-zinc-700">
+<p class="text-[#101818] dark:text-zinc-300 text-sm font-medium">Creative Flow</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 px-6 border border-zinc-100 dark:border-zinc-700">
+<p class="text-[#101818] dark:text-zinc-300 text-sm font-medium">Strategic</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 px-6 border border-zinc-100 dark:border-zinc-700">
+<p class="text-[#101818] dark:text-zinc-300 text-sm font-medium">Focus</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 px-6 border border-zinc-100 dark:border-zinc-700">
+<p class="text-[#101818] dark:text-zinc-300 text-sm font-medium">Calm</p>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-6 pt-6 pb-2">
+<h3 class="text-[#101818] dark:text-white text-xl font-bold tracking-tight">Curated Coaches</h3>
+</div>
+<!-- Vertical Coach List -->
+<div class="px-6 space-y-6">
+<!-- Coach Card: The Archivist (Saved State) -->
+<div class="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-xl soft-shadow overflow-hidden border border-[#f0f4f5]/10">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="abstract architectural minimalist geometry in beige and teal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvEMKnbkWFLZsK9B9cDveCVv6AVxjyeTMvFeKLajYot0_RjWBiHk2RPEK9GCFDo4qdXqIKN2H0TKO_t5YAeY79u0vsBEA-yxZfYGLxOoGJ7dEE14Wct5sFfJZkkQVRvpj0ZaF_etb_5rO4rLEHTA6rDdua_z4p7O4gwtBH7g8AwEohwoSuhmWeT8OVmsnCt72UPkQM6fOR6VI98cI2GM9e7sPRyNiobOVXGXOO0fFZYxUMOXgNCN8QEAZY1tkt-wAfQGidmves0fQ");'>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase">
+                        Saved
+                    </div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#101818] dark:text-white text-lg font-extrabold leading-tight">The Archivist</h4>
+<span class="material-symbols-outlined text-primary fill-1">bookmark</span>
+</div>
+<p class="text-[#5e898d] dark:text-zinc-400 text-sm font-medium leading-snug">Structure your thoughts for long-term clarity and mental order.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">SYSTEMS</span>
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">LOGIC</span>
+</div>
+</div>
+</div>
+<!-- Coach Card: The Muse -->
+<div class="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-xl soft-shadow overflow-hidden border border-[#f0f4f5]/10">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="abstract organic flowing shapes in muted sunset colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDT1GRE0os71tbYREWw334wuoztOHLqH7De5MumNA1L00tUSiY3dWNwUZeQIwn-n56yDIRURLUkb0FynPesHWR73lnvaJjlrF6p_kXqQ4lZgrAUep8UToCg-W9nO7TMQ3zI83u5x__crD_vwFHAoz0DGK6K-YmFbCAFakPQWZf6GSQpgf_2GcZ2TdmbVHjAf8JyR_Jdolewl4eCxSC500qVz3QL6IXyIYLFT0Jdp69kjJmgi3KqhiNOG2AY3BtlZmhsLLWBowmpliY");'>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#101818] dark:text-white text-lg font-extrabold leading-tight">The Muse</h4>
+<span class="material-symbols-outlined text-zinc-300 dark:text-zinc-600">bookmark</span>
+</div>
+<p class="text-[#5e898d] dark:text-zinc-400 text-sm font-medium leading-snug">Unlocking creative blocks through lateral thinking and play.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">INTUITION</span>
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">PLAY</span>
+</div>
+</div>
+</div>
+<!-- Coach Card: The Stoic -->
+<div class="group relative flex flex-col bg-white dark:bg-zinc-900 rounded-xl soft-shadow overflow-hidden border border-[#f0f4f5]/10">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover" data-alt="minimalist dark mountain landscape in foggy morning" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkXA0oPRgffUR1pp4USoAf3tXcS9ZWMJaaAa71STgCx7_2ZPOYPSPv2hAKp-7tSrLPgU8ijd_Z9qu7KDN4hOSPGIUa49wUVU7PN5wWEnMrZrk6-MRf_MN1C-Lmr3NVUdJlRo50jdBTD24CzyQ2Cjhx9KZvV2wNlFOpTgF81UB8HXr2IWOxeJZ5TwojgqTEAGWCXz_nRJZ0SW4rgmujxPoV23ksBjDwIpgC1cO-w7Hhd4nBTRyHc7jFCxNGplF3aK8T87Z8B63UxPw");'>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<h4 class="text-[#101818] dark:text-white text-lg font-extrabold leading-tight">The Stoic</h4>
+<span class="material-symbols-outlined text-zinc-300 dark:text-zinc-600">bookmark</span>
+</div>
+<p class="text-[#5e898d] dark:text-zinc-400 text-sm font-medium leading-snug">Finding calm in high-pressure environments through resilience.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">RESILIENCE</span>
+<span class="bg-primary/5 dark:bg-primary/20 text-primary text-[11px] font-bold px-2 py-1 rounded">LOGIC</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Custom Bottom Navigation -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm h-16 bg-white dark:bg-zinc-900/90 backdrop-blur-xl rounded-full shadow-2xl border border-[#f0f4f5]/20 flex items-center justify-around px-8 z-50">
+<button class="flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-0.5">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#5e898d] dark:text-zinc-500">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-0.5">Sessions</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#5e898d] dark:text-zinc-500">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter mt-0.5">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

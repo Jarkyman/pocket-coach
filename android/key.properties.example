@@ -1,0 +1,4 @@
+storePassword=[PASSWORD]
+keyPassword=[PASSWORD]
+keyAlias=pocketcoach
+storeFile=../app/upload-keystore.jks

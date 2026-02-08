@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-dark": "#0a0a0b",
+                        "surface-dark": "#161618",
+                        "accent-grey": "#27272a",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .premium-shadow {
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .glass-panel {
+            background: rgba(22, 22, 24, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-zinc-400 min-h-screen">
+<div class="sticky top-0 z-20 flex items-center bg-background-dark/80 backdrop-blur-xl p-4 justify-between border-b border-white/5">
+<div class="text-white flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border border-white/10" data-icon="ArrowLeft">
+<span class="material-symbols-outlined text-lg">arrow_back_ios_new</span>
+</div>
+<h2 class="text-zinc-500 text-[10px] font-bold uppercase tracking-[0.3em] flex-1 text-center">Coach Profile</h2>
+<div class="size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-500">more_horiz</span>
+</div>
+</div>
+<main class="max-w-md mx-auto pb-44">
+<div class="flex p-8 pt-10 @container">
+<div class="flex w-full flex-col gap-8 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-44 w-44 border border-white/10 premium-shadow" data-alt="Portrait of Soren" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2yedncVJZBkoj5sGUS1nlaVLbaHuNL5_qcdi7y4Zo5hpHcSGjPcqw5mNEB9xTcrgVi0-BAMgqitVfYw8sXw2dpjGl71xezqg4OvXQD-njiMe89UUMqMQ60MAgPKbXQ-PJGUsvvoIVXpKpocHzdVv3myMxNDfvSGS3ruI8cwRAl44SA0uf3DLDh6rl91cInXFxCxr0hCu3KxvPyiL5tNkmKUzRc4TqeeCp2rJBdyxzzejtiHBHnXn2rHRbbKpferYi7KgW1BTUUAA");'>
+</div>
+<div class="absolute bottom-2 right-2 bg-primary text-white p-1.5 rounded-full border-4 border-background-dark">
+<span class="material-symbols-outlined text-[14px] block">done_all</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-3">
+<h1 class="text-white text-5xl font-extralight tracking-tight text-center">Soren</h1>
+<div class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
+<p class="text-zinc-300 text-[10px] font-semibold uppercase tracking-[0.2em] text-center">Clarity &amp; Focus Guide</p>
+</div>
+<p class="text-zinc-500 text-lg font-light leading-relaxed text-center px-6 pt-2 italic">
+                    "Reclaiming your mental space through intentional stillness."
+                </p>
+</div>
+</div>
+</div>
+<div class="px-6 mt-4">
+<div class="flex items-center justify-between pb-4 border-b border-white/5">
+<h3 class="text-white/90 text-sm font-semibold tracking-wider uppercase">Focus Areas</h3>
+<span class="text-primary text-xs font-medium">3 Specializations</span>
+</div>
+<div class="py-2 divide-y divide-white/5">
+<div class="flex items-center gap-x-5 py-5">
+<div class="flex size-12 items-center justify-center rounded-xl bg-surface-dark border border-white/5 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="text-zinc-200 text-base font-medium">Cognitive Decluttering</p>
+<p class="text-zinc-500 text-sm">Advanced mental load reduction</p>
+</div>
+</div>
+<div class="flex items-center gap-x-5 py-5">
+<div class="flex size-12 items-center justify-center rounded-xl bg-surface-dark border border-white/5 text-primary">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</div>
+<div>
+<p class="text-zinc-200 text-base font-medium">Deep Work Architecture</p>
+<p class="text-zinc-500 text-sm">Flow-state optimization</p>
+</div>
+</div>
+<div class="flex items-center gap-x-5 py-5">
+<div class="flex size-12 items-center justify-center rounded-xl bg-surface-dark border border-white/5 text-primary">
+<span class="material-symbols-outlined">flare</span>
+</div>
+<div>
+<p class="text-zinc-200 text-base font-medium">Morning Alignment</p>
+<p class="text-zinc-500 text-sm">Priming for clarity</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-6 mt-6">
+<div class="glass-panel rounded-3xl p-6 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-zinc-200 text-base font-medium">Offline Intelligence</p>
+<p class="text-zinc-500 text-xs">Access Soren's core wisdom without data</p>
+</div>
+<label class="relative flex h-7 w-12 cursor-pointer items-center rounded-full bg-zinc-800 p-1 transition-colors has-[:checked]:bg-primary">
+<input checked="" class="peer hidden" type="checkbox"/>
+<div class="h-5 w-5 rounded-full bg-white transition-all peer-checked:translate-x-5"></div>
+</label>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-6 pb-10 bg-gradient-to-t from-background-dark via-background-dark to-transparent z-30">
+<div class="max-w-md mx-auto flex flex-col gap-3">
+<button class="w-full bg-zinc-100 text-background-dark font-bold py-5 rounded-2xl active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-xl">chat_bubble_outline</span>
+            Start Chatting
+        </button>
+<button class="w-full bg-accent-grey/50 backdrop-blur-sm text-zinc-300 border border-white/10 font-medium py-4 rounded-2xl active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+            Preview Voice Style
+        </button>
+</div>
+</div>
+<div class="fixed top-0 right-0 -z-10 opacity-20 pointer-events-none">
+<div class="w-[500px] h-[500px] bg-primary rounded-full blur-[140px] -mr-64 -mt-64"></div>
+</div>
+<div class="fixed bottom-0 left-0 -z-10 opacity-10 pointer-events-none">
+<div class="w-64 h-64 bg-primary rounded-full blur-[100px] -ml-32 -mb-32"></div>
+</div>
+
+</body></html>

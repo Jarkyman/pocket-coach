@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1033627303488",
+    "project_id": "pocket-coach-hs",
+    "storage_bucket": "pocket-coach-hs.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033627303488:android:7bf65819406a8481ade9a5",
+        "android_client_info": {
+          "package_name": "com.hartvigsolutions.pocket_coach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq1fdlcg4WfooKOGdUyFyGus9gEAaJmMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

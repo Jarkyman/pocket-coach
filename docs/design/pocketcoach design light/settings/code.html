@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - PocketCoach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#18181b",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-card {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03);
+        }
+        .dark .soft-card {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#101818] dark:text-gray-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar (iOS Style) -->
+<header class="flex items-center bg-transparent px-4 py-3 justify-between sticky top-0 z-10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<main class="flex-1 px-6 pb-24">
+<!-- Headline Section: Significant Breathing Room -->
+<div class="mt-8 mb-10">
+<h1 class="text-[#101818] dark:text-white text-5xl font-black tracking-tight leading-none mb-2">
+                    Settings
+                </h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Fine-tune your clarity.</p>
+</div>
+<!-- Profile / Personalization Group -->
+<div class="mb-8">
+<h3 class="text-[#101818] dark:text-white text-xs font-bold uppercase tracking-[0.2em] px-1 mb-4 opacity-50">Identity</h3>
+<div class="bg-white dark:bg-[#242427] rounded-xl p-5 soft-card flex items-center gap-4 border border-black/5 dark:border-white/5 active:scale-[0.98] transition-transform">
+<div class="size-14 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center overflow-hidden">
+<img alt="Profile" class="size-full object-cover" data-alt="User profile portrait showing focus and calm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjRqoppRfTGDMF4c7e4IFd3-XmL1VVy7JqybwdoOoTGp4fn-r5UR04JfDaBTItKj2shRCKqdMDs_CSQ-bdCmjrtVdPFZAlJA4W-fPfnrg16HTQCz_3rufAXVERtU_pTu45UXLZL8U2XPSuWzZgZCmDVnBDv5vEwST46t5tSnhfDp7EPtFLysA6VSa9GlZLy1oisDJaqQ3r6Wzy5iiAWjbKD7COPXvulG_7Gg27bQUAabGMj5wEVeBVJ2SI-28ivGUsDAAdp-_si9o"/>
+</div>
+<div class="flex-1">
+<p class="text-[#101818] dark:text-white font-bold text-lg">Edit personal context</p>
+<p class="text-gray-400 dark:text-gray-500 text-sm">Update your goals and focus areas</p>
+</div>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+</div>
+<!-- Subscription Group -->
+<div class="mb-8">
+<h3 class="text-[#101818] dark:text-white text-xs font-bold uppercase tracking-[0.2em] px-1 mb-4 opacity-50">Membership</h3>
+<div class="bg-white dark:bg-[#242427] rounded-xl soft-card border border-black/5 dark:border-white/5 overflow-hidden">
+<div class="flex items-center gap-4 px-5 py-4 border-b border-black/[0.03] dark:border-white/[0.03] active:bg-gray-50 dark:active:bg-white/5 transition-colors">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<p class="text-[#101818] dark:text-white text-base font-semibold flex-1">Manage subscription</p>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 px-5 py-4 active:bg-gray-50 dark:active:bg-white/5 transition-colors">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">history</span>
+</div>
+<p class="text-[#101818] dark:text-white text-base font-semibold flex-1">Restore purchases</p>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Appearance Group -->
+<div class="mb-8">
+<h3 class="text-[#101818] dark:text-white text-xs font-bold uppercase tracking-[0.2em] px-1 mb-4 opacity-50">Interface</h3>
+<div class="bg-white dark:bg-[#242427] rounded-xl soft-card p-4 border border-black/5 dark:border-white/5">
+<div class="flex items-center gap-4 mb-4 px-1">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<p class="text-[#101818] dark:text-white text-base font-semibold flex-1">Theme</p>
+</div>
+<div class="grid grid-cols-3 gap-2 bg-background-light dark:bg-black/20 p-1.5 rounded-lg">
+<button class="py-2 text-xs font-bold rounded-md bg-white dark:bg-primary shadow-sm text-primary dark:text-white">
+                            System
+                        </button>
+<button class="py-2 text-xs font-bold rounded-md text-gray-500 dark:text-gray-400 hover:bg-white/50 dark:hover:bg-white/5">
+                            Light
+                        </button>
+<button class="py-2 text-xs font-bold rounded-md text-gray-500 dark:text-gray-400 hover:bg-white/50 dark:hover:bg-white/5">
+                            Dark
+                        </button>
+</div>
+</div>
+</div>
+<!-- Information Group -->
+<div class="mb-8">
+<h3 class="text-[#101818] dark:text-white text-xs font-bold uppercase tracking-[0.2em] px-1 mb-4 opacity-50">More</h3>
+<div class="bg-white dark:bg-[#242427] rounded-xl soft-card border border-black/5 dark:border-white/5 overflow-hidden">
+<div class="flex items-center gap-4 px-5 py-4 border-b border-black/[0.03] dark:border-white/[0.03] active:bg-gray-50 dark:active:bg-white/5 transition-colors">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-[#101818] dark:text-white text-base font-semibold flex-1">About PocketCoach</p>
+<span class="material-symbols-outlined text-gray-300">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="text-center py-6">
+<p class="text-gray-400 dark:text-gray-600 text-[10px] font-bold uppercase tracking-[0.3em]">Version 1.0.0 (Build 42)</p>
+<div class="flex justify-center gap-6 mt-4">
+<a class="text-xs font-medium text-gray-400 underline decoration-primary/30 underline-offset-4" href="#">Privacy</a>
+<a class="text-xs font-medium text-gray-400 underline decoration-primary/30 underline-offset-4" href="#">Terms</a>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-[#18181b]/80 backdrop-blur-xl border-t border-black/[0.03] dark:border-white/[0.03] px-8 py-3 flex justify-between items-center pb-8">
+<div class="flex flex-col items-center gap-1 text-gray-300">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Focus</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-300">
+<span class="material-symbols-outlined">bubble_chart</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Coach</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Settings</span>
+</div>
+</nav>
+</div>
+</body></html>

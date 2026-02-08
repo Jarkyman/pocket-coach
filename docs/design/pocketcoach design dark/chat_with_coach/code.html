@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat with Coach - Focus &amp; Clarity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00d1e0", // Brighter teal for dark mode contrast
+                        "primary-dark": "#006c75",
+                        "background-dark": "#0a0a0a", // Deeper black for premium OLED feel
+                        "surface-dark": "#1a1a1c", // Elevated surface color
+                        "bubble-coach": "#242427", // Slightly lighter than background
+                        "bubble-user": "#323235", // More distinct grey for user
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .message-bubble-in {
+            border-bottom-left-radius: 4px;
+        }
+        .message-bubble-out {
+            border-bottom-right-radius: 4px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #0a0a0a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-zinc-100 antialiased">
+<div class="flex flex-col h-screen max-w-md mx-auto relative overflow-hidden bg-background-dark">
+<header class="sticky top-0 z-20 bg-background-dark/80 ios-blur border-b border-white/5">
+<div class="flex items-center p-4 justify-between h-16">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-zinc-400">arrow_back_ios_new</span>
+</button>
+<div class="relative">
+<div class="size-10 rounded-full bg-center bg-no-repeat bg-cover border border-white/10" data-alt="Coach Alex" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlCWjuztEXYpHwCT5hwsVWRcczGI-S0SibpiGCZ5J2X4KmDYAy4Fhx0SwN2CvUy6zuK9uC4HNHP8e0Ywaxh08pEQWHIlqEHzZHgYeySgRwQRSgbbqIIKjn-9LJAIspj_CduWwL4an7uXBBu5JKx0iH1rEtW0hS2yCZ6AkoO2q44iCbDWnVx04VWy8oaW4EtgpBa0WUv8bb0sRy9DxbfbJ50eKO5GfExne0kPmoZ8CbMVNeISdJech28Tk9qEEY61uoRz9BRFqLEY0");'>
+</div>
+<div class="absolute bottom-0 right-0 size-2.5 bg-green-500 border-2 border-background-dark rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-white text-base font-semibold leading-tight">Coach Alex</h2>
+<span class="text-[10px] font-bold text-primary tracking-[0.05em] uppercase">Focus Session</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="size-10 flex items-center justify-center rounded-full text-zinc-400 hover:bg-white/5">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-8 hide-scrollbar">
+<div class="flex items-end gap-3 max-w-[85%]">
+<div class="flex flex-col gap-1.5 items-start">
+<div class="bg-bubble-coach border border-white/5 rounded-2xl message-bubble-in px-5 py-4 text-zinc-200 text-[15px] leading-relaxed shadow-xl">
+                        Hello! I'm here to help you find your flow. Your calendar looks a bit tight today—how are you feeling about your deep work session?
+                    </div>
+<span class="text-[10px] text-zinc-500 ml-1 font-medium">10:02 AM</span>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end ml-auto max-w-[85%]">
+<div class="flex flex-col gap-1.5 items-end">
+<div class="bg-bubble-user border border-white/10 rounded-2xl message-bubble-out px-5 py-4 text-white text-[15px] leading-relaxed shadow-lg">
+                        I'm having a lot of trouble getting started. I keep checking my email instead.
+                    </div>
+<span class="text-[10px] text-zinc-500 mr-1 font-medium">10:04 AM</span>
+</div>
+</div>
+<div class="flex items-end gap-3 max-w-[85%]">
+<div class="flex flex-col gap-1.5 items-start">
+<div class="bg-bubble-coach border border-white/5 rounded-2xl message-bubble-in px-5 py-4 text-zinc-200 text-[15px] leading-relaxed shadow-xl">
+                        That "avoidance loop" is very common when a task feels daunting. Let's try to break it down. Would you like to prioritize your top 3 items, or should we do a 2-minute "micro-start" exercise?
+                    </div>
+<span class="text-[10px] text-zinc-500 ml-1 font-medium">10:05 AM</span>
+</div>
+</div>
+</main>
+<footer class="pb-10 pt-2 bg-background-dark/95 ios-blur border-t border-white/5">
+<div class="flex gap-2.5 px-4 mb-4 overflow-x-auto hide-scrollbar whitespace-nowrap">
+<div class="inline-flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-surface-dark border border-white/10 hover:border-primary/50 cursor-pointer transition-all active:scale-95">
+<span class="text-zinc-300 text-sm font-medium">Help me prioritize</span>
+</div>
+<div class="inline-flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-surface-dark border border-white/10 hover:border-primary/50 cursor-pointer transition-all active:scale-95">
+<span class="text-zinc-300 text-sm font-medium">I’m stuck</span>
+</div>
+<div class="inline-flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-surface-dark border border-white/10 hover:border-primary/50 cursor-pointer transition-all active:scale-95">
+<span class="text-zinc-300 text-sm font-medium">Micro-start exercise</span>
+</div>
+<div class="inline-flex h-9 shrink-0 items-center justify-center px-4 rounded-full bg-surface-dark border border-white/10 hover:border-primary/50 cursor-pointer transition-all active:scale-95">
+<span class="text-zinc-300 text-sm font-medium">Summarize plan</span>
+</div>
+</div>
+<div class="px-4">
+<div class="relative flex items-center bg-surface-dark rounded-2xl border border-white/10 p-2 shadow-2xl">
+<button class="flex items-center justify-center size-10 rounded-xl text-zinc-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-[15px] px-2 text-zinc-100 placeholder:text-zinc-600" placeholder="Share your thoughts..." type="text"/>
+<div class="flex items-center gap-1">
+<button class="flex items-center justify-center size-10 rounded-xl text-zinc-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">mic</span>
+</button>
+<button class="flex items-center justify-center size-10 bg-primary text-black rounded-xl shadow-lg shadow-primary/10 active:scale-90 transition-all">
+<span class="material-symbols-outlined font-bold text-[20px]">send</span>
+</button>
+</div>
+</div>
+<div class="h-2"></div>
+</div>
+</footer>
+</div>
+
+</body></html>

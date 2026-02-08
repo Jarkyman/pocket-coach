@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coach Library - PocketCoach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4FD1C5",
+                        "background-dark": "#09090b",
+                        "surface-dark": "#18181b",
+                        "card-dark": "#27272a"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Epilogue', sans-serif;
+                -webkit-tap-highlight-color: transparent;
+                @apply bg-background-dark text-zinc-100;
+            }
+        }
+        .soft-elevation {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen">
+<div class="relative max-w-md mx-auto min-h-screen flex flex-col pb-28">
+<header class="sticky top-0 z-20 bg-background-dark/90 backdrop-blur-xl px-6 pt-14 pb-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="text-white text-3xl font-bold tracking-tight">Good evening</h2>
+<p class="text-zinc-400 text-sm font-medium mt-1">Ready for some clarity?</p>
+</div>
+<div class="flex size-10 items-center justify-center rounded-full bg-zinc-800/50 border border-zinc-700/50">
+<span class="material-symbols-outlined text-white text-xl">search</span>
+</div>
+</div>
+</header>
+<div class="px-6 py-4 sticky top-[104px] z-10 bg-background-dark/90 backdrop-blur-xl">
+<div class="flex gap-3 overflow-x-auto no-scrollbar py-2">
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-white px-6">
+<p class="text-black text-sm font-bold">All</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-zinc-800 px-6 border border-zinc-700">
+<p class="text-zinc-100 text-sm font-medium">Creative Flow</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-zinc-800 px-6 border border-zinc-700">
+<p class="text-zinc-100 text-sm font-medium">Strategic</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-zinc-800 px-6 border border-zinc-700">
+<p class="text-zinc-100 text-sm font-medium">Focus</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center rounded-full bg-zinc-800 px-6 border border-zinc-700">
+<p class="text-zinc-100 text-sm font-medium">Calm</p>
+</div>
+</div>
+</div>
+<div class="px-6 pt-6 pb-4">
+<h3 class="text-zinc-400 text-xs font-bold tracking-[0.2em] uppercase">Curated Coaches</h3>
+</div>
+<div class="px-6 space-y-6">
+<div class="group relative flex flex-col bg-zinc-900 rounded-2xl soft-elevation overflow-hidden border border-zinc-800/50">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover scale-105" data-alt="abstract architectural minimalist geometry in beige and teal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvEMKnbkWFLZsK9B9cDveCVv6AVxjyeTMvFeKLajYot0_RjWBiHk2RPEK9GCFDo4qdXqIKN2H0TKO_t5YAeY79u0vsBEA-yxZfYGLxOoGJ7dEE14Wct5sFfJZkkQVRvpj0ZaF_etb_5rO4rLEHTA6rDdua_z4p7O4gwtBH7g8AwEohwoSuhmWeT8OVmsnCt72UPkQM6fOR6VI98cI2GM9e7sPRyNiobOVXGXOO0fFZYxUMOXgNCN8QEAZY1tkt-wAfQGidmves0fQ");'>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-background-dark text-[10px] font-black px-3 py-1.5 rounded-full tracking-[0.1em] uppercase shadow-lg">
+                        Saved
+                    </div>
+</div>
+<div class="p-6 -mt-4 relative z-10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="text-white text-xl font-bold">The Archivist</h4>
+<span class="material-symbols-outlined text-primary fill-1 text-2xl">bookmark</span>
+</div>
+<p class="text-zinc-400 text-sm leading-relaxed font-normal">Structure your thoughts for long-term clarity and mental order.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-primary/10 text-primary text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-primary/20 uppercase">Systems</span>
+<span class="bg-primary/10 text-primary text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-primary/20 uppercase">Logic</span>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-zinc-900 rounded-2xl soft-elevation overflow-hidden border border-zinc-800/50">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover opacity-80" data-alt="abstract organic flowing shapes in muted sunset colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDT1GRE0os71tbYREWw334wuoztOHLqH7De5MumNA1L00tUSiY3dWNwUZeQIwn-n56yDIRURLUkb0FynPesHWR73lnvaJjlrF6p_kXqQ4lZgrAUep8UToCg-W9nO7TMQ3zI83u5x__crD_vwFHAoz0DGK6K-YmFbCAFakPQWZf6GSQpgf_2GcZ2TdmbVHjAf8JyR_Jdolewl4eCxSC500qVz3QL6IXyIYLFT0Jdp69kjJmgi3KqhiNOG2AY3BtlZmhsLLWBowmpliY");'>
+</div>
+</div>
+<div class="p-6 -mt-4 relative z-10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="text-white text-xl font-bold">The Muse</h4>
+<span class="material-symbols-outlined text-zinc-600 text-2xl">bookmark</span>
+</div>
+<p class="text-zinc-400 text-sm leading-relaxed font-normal">Unlocking creative blocks through lateral thinking and play.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-zinc-800 text-zinc-400 text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-zinc-700/50 uppercase">Intuition</span>
+<span class="bg-zinc-800 text-zinc-400 text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-zinc-700/50 uppercase">Play</span>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col bg-zinc-900 rounded-2xl soft-elevation overflow-hidden border border-zinc-800/50">
+<div class="relative w-full aspect-[16/9] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover opacity-80" data-alt="minimalist dark mountain landscape in foggy morning" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkXA0oPRgffUR1pp4USoAf3tXcS9ZWMJaaAa71STgCx7_2ZPOYPSPv2hAKp-7tSrLPgU8ijd_Z9qu7KDN4hOSPGIUa49wUVU7PN5wWEnMrZrk6-MRf_MN1C-Lmr3NVUdJlRo50jdBTD24CzyQ2Cjhx9KZvV2wNlFOpTgF81UB8HXr2IWOxeJZ5TwojgqTEAGWCXz_nRJZ0SW4rgmujxPoV23ksBjDwIpgC1cO-w7Hhd4nBTRyHc7jFCxNGplF3aK8T87Z8B63UxPw");'>
+</div>
+</div>
+<div class="p-6 -mt-4 relative z-10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h4 class="text-white text-xl font-bold">The Stoic</h4>
+<span class="material-symbols-outlined text-zinc-600 text-2xl">bookmark</span>
+</div>
+<p class="text-zinc-400 text-sm leading-relaxed font-normal">Finding calm in high-pressure environments through resilience.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-zinc-800 text-zinc-400 text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-zinc-700/50 uppercase">Resilience</span>
+<span class="bg-zinc-800 text-zinc-400 text-[10px] font-black tracking-widest px-2.5 py-1 rounded-md border border-zinc-700/50 uppercase">Logic</span>
+</div>
+</div>
+</div>
+</div>
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm h-18 bg-zinc-900/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/5 flex items-center justify-around px-8 z-50">
+<button class="flex flex-col items-center justify-center text-primary">
+<span class="material-symbols-outlined fill-1 text-2xl">home</span>
+<span class="text-[9px] font-black uppercase tracking-[0.15em] mt-1">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="text-[9px] font-black uppercase tracking-[0.15em] mt-1">Sessions</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-500">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[9px] font-black uppercase tracking-[0.15em] mt-1">Profile</span>
+</button>
+</nav>
+</div>
+
+</body></html>

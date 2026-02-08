@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Focus Areas - Premium Dark Mode</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#009ea8",
+                        "deep-dark": "#0f1115",
+                        "chip-bg": "#1a1d23",
+                        "chip-selected": "rgba(0, 158, 168, 0.12)",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .ios-bottom-padding {
+            padding-bottom: env(safe-area-inset-bottom, 24px);
+        }
+        .soft-glow {
+            box-shadow: 0 0 20px rgba(0, 158, 168, 0.1);
+        }
+        body {
+            background-color: #0f1115;
+            min-height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display antialiased text-zinc-100 transition-colors duration-300">
+<div class="flex flex-col min-h-screen max-w-md mx-auto relative overflow-hidden bg-deep-dark">
+<header class="pt-6 px-6">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<p class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] leading-none opacity-90">Step 02 / 10</p>
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+</div>
+<div class="h-1 w-full bg-zinc-800/50 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700 ease-out" style="width: 20%;"></div>
+</div>
+</div>
+</header>
+<main class="flex-grow px-8 pt-10">
+<h1 class="text-zinc-100 text-[32px] font-bold leading-[1.2] tracking-tight pb-10">
+                What do you want help with right now?
+            </h1>
+<div class="grid grid-cols-2 gap-4 pb-40">
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-selected border border-primary/40 soft-glow transition-all duration-300">
+<div class="flex justify-between items-start w-full">
+<span class="material-symbols-outlined text-primary text-[28px] font-light">bolt</span>
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-dark text-[14px] font-bold">check</span>
+</div>
+</div>
+<p class="text-white text-base font-bold leading-snug">Productivity</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">center_focus_strong</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Focus</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">lightbulb</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Life clarity</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">repeat</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Habits</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">work</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Business</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">palette</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Creativity</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">verified_user</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Confidence</p>
+</div>
+<div class="group flex flex-col justify-between h-36 p-5 rounded-2xl bg-chip-bg border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+<span class="material-symbols-outlined text-zinc-500 text-[28px] font-light group-hover:text-zinc-300 transition-colors">alt_route</span>
+<p class="text-zinc-400 text-base font-semibold leading-snug group-hover:text-zinc-200 transition-colors">Decisions</p>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-gradient-to-t from-deep-dark via-deep-dark to-transparent px-8 pt-12 pb-8 ios-bottom-padding z-10">
+<div class="flex flex-col gap-4">
+<button class="flex items-center justify-center w-full h-14 bg-primary hover:brightness-110 active:scale-[0.98] transition-all rounded-2xl shadow-xl shadow-primary/20">
+<span class="text-deep-dark text-lg font-bold tracking-tight">Continue</span>
+</button>
+<button class="flex items-center justify-center w-full h-12 bg-transparent hover:bg-zinc-800/50 rounded-2xl transition-all">
+<span class="text-zinc-500 text-base font-medium tracking-wide">Skip for now</span>
+</button>
+</div>
+</footer>
+<div class="absolute -top-32 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute top-1/2 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
+</div>
+
+</body></html>

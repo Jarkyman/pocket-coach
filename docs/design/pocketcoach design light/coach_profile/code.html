@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006c75",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#18181b",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 108, 117, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#101818] dark:text-[#fbfaf9] min-h-screen">
+<!-- Top Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-zinc-800 soft-shadow" data-icon="ArrowLeft">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-[#101818] dark:text-white text-sm font-bold uppercase tracking-[0.2em] flex-1 text-center">Profile Details</h2>
+<div class="size-10"></div> <!-- Spacer for balance -->
+</div>
+<main class="max-w-md mx-auto pb-32">
+<!-- Profile Header -->
+<div class="flex p-8 pt-4 @container">
+<div class="flex w-full flex-col gap-8 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-40 w-40 border-4 border-white dark:border-zinc-800 soft-shadow" data-alt="Portrait of a calm male coach in natural lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2yedncVJZBkoj5sGUS1nlaVLbaHuNL5_qcdi7y4Zo5hpHcSGjPcqw5mNEB9xTcrgVi0-BAMgqitVfYw8sXw2dpjGl71xezqg4OvXQD-njiMe89UUMqMQ60MAgPKbXQ-PJGUsvvoIVXpKpocHzdVv3myMxNDfvSGS3ruI8cwRAl44SA0uf3DLDh6rl91cInXFxCxr0hCu3KxvPyiL5tNkmKUzRc4TqeeCp2rJBdyxzzejtiHBHnXn2rHRbbKpferYi7KgW1BTUUAA");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full border-2 border-white dark:border-zinc-800">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center space-y-2">
+<p class="text-[#101818] dark:text-white text-4xl font-black leading-tight tracking-tight text-center">Soren</p>
+<div class="bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+<p class="text-primary text-xs font-bold uppercase tracking-widest text-center">Clarity &amp; Focus Guide</p>
+</div>
+<p class="text-[#5e898d] dark:text-[#a1b5b7] text-lg font-light leading-relaxed text-center px-4 pt-2 italic">
+                        "Reclaiming your mental space through intentional stillness."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="px-6">
+<h3 class="text-[#101818] dark:text-white text-xl font-bold leading-tight tracking-tight pb-4 border-b border-[#dae6e7] dark:border-zinc-800">Expertise</h3>
+</div>
+<!-- Checklists / Help Points -->
+<div class="px-6 py-4 space-y-1">
+<div class="flex items-center gap-x-4 py-4 border-b border-[#dae6e7]/50 dark:border-zinc-800/50">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/5 text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="text-[#101818] dark:text-white text-base font-medium">Reducing cognitive load</p>
+<p class="text-[#5e898d] text-xs">Techniques for mental decluttering</p>
+</div>
+</div>
+<div class="flex items-center gap-x-4 py-4 border-b border-[#dae6e7]/50 dark:border-zinc-800/50">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/5 text-primary">
+<span class="material-symbols-outlined">event_repeat</span>
+</div>
+<div>
+<p class="text-[#101818] dark:text-white text-base font-medium">Deep work scheduling</p>
+<p class="text-[#5e898d] text-xs">Structuring peak performance hours</p>
+</div>
+</div>
+<div class="flex items-center gap-x-4 py-4">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/5 text-primary">
+<span class="material-symbols-outlined">wb_twilight</span>
+</div>
+<div>
+<p class="text-[#101818] dark:text-white text-base font-medium">Morning alignment</p>
+<p class="text-[#5e898d] text-xs">Intentional routines for clarity</p>
+</div>
+</div>
+</div>
+<!-- Utility Action Panel -->
+<div class="p-6">
+<div class="flex flex-col items-stretch gap-4 rounded-2xl border border-[#dae6e7] dark:border-zinc-800 bg-white dark:bg-zinc-900/50 p-6 soft-shadow">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-[#101818] dark:text-white text-base font-bold">Available Offline</p>
+<p class="text-[#5e898d] text-sm font-normal">Keep Soren available without internet.</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#f0f4f5] dark:bg-zinc-700 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white soft-shadow"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Action Hub -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<div class="max-w-md mx-auto flex flex-col gap-3">
+<button class="w-full bg-primary text-white font-bold py-5 rounded-2xl soft-shadow active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat_bubble</span>
+                Start Chatting with Soren
+            </button>
+<button class="w-full bg-white dark:bg-zinc-800 text-primary border border-primary/20 dark:border-primary/40 font-bold py-4 rounded-2xl active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                Preview Coaching Style
+            </button>
+</div>
+</div>
+<!-- Background Decoration (Subtle) -->
+<div class="fixed top-0 right-0 -z-10 opacity-10 pointer-events-none">
+<div class="w-96 h-96 bg-primary rounded-full blur-[100px] -mr-48 -mt-48"></div>
+</div>
+</body></html>
