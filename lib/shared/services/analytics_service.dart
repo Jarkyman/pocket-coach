@@ -52,6 +52,9 @@ class AnalyticsService {
       if (value is bool) {
         return MapEntry(key, value.toString());
       }
+      if (value is List) {
+        return MapEntry(key, value.join(', '));
+      }
       return MapEntry(key, value);
     });
     await _analytics.logEvent(name: name, parameters: sanitizedParams);

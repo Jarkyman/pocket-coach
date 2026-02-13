@@ -33,6 +33,22 @@ Use demo mode to get screenshots for the app store.
 flutter run --dart-define=DEMO_MODE=true
 ```
 
+## Deployment
+
+### iOS (IPA)
+To build an IPA for TestFlight or App Store:
+```bash
+flutter build ipa
+```
+This will create an archive in `build/ios/archive/Runner.xcarchive` and an IPA in `build/ios/ipa`.
+
+### Android (App Bundle)
+To build an App Bundle (.aab) for Play Store:
+```bash
+flutter build appbundle
+```
+The bundle will be located at `build/app/outputs/bundle/release/app-release.aab`.
+
 ## Architecture
 - **State Management**: Riverpod
 - **Navigation**: GoRouter

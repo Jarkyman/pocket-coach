@@ -1,0 +1,10 @@
+# App Store Connect - App Review Information
+Copy/paste this into the "Notes" section for the App Reviewer:
+
+**Subject: Compliance with Guideline 5.1.1(i) - AI Data Processing**
+
+1. **AI Provider:** We use OpenAI API for generating coaching responses.
+2. **Data Sent:** We send user-inputted chat messages, selected coach persona, and user-defined context values.
+3. **Consent:** We have implemented a mandatory "First Time" consent modal. Before the first message can be sent, the user is presented with a clear disclosure of what data is sent and to whom (OpenAI). The user must explicitly tap "I Agree" to proceed. If they cancel, no data is sent.
+4. **Privacy Policy:** Our Privacy Policy has been updated to include a specific "AI Data Processing" section detailing data collection, usage, and sharing.
+   - Privacy Policy URL: https://hartvigsolutions.com/?privacypolicy=true#pocket-coach
