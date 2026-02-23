@@ -7,10 +7,18 @@ import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+
 class MainActivity : FlutterFragmentActivity() {
     private val CHANNEL = "com.hartvigsolutions.app/theme"
     private val PREFS_NAME = "theme_prefs"
     private val KEY_THEME = "selected_theme"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
+    }
 
     override fun attachBaseContext(newBase: Context) {
         val prefs = newBase.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)

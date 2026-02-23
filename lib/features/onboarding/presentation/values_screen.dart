@@ -7,7 +7,6 @@ import '../../../shared/ui/app_scaffold.dart';
 import '../../../shared/ui/app_top_bar.dart';
 import '../../../shared/ui/app_button.dart';
 import '../../../shared/ui/app_text_field.dart';
-import '../../../shared/services/analytics_service.dart';
 import 'context_controller.dart';
 
 class ValuesScreen extends ConsumerStatefulWidget {
@@ -50,11 +49,16 @@ class _ValuesScreenState extends ConsumerState<ValuesScreen> {
           values: _valuesController.text.trim(),
           challenges: _challengesController.text.trim(),
         );
-    await ref.read(contextControllerProvider.notifier).completeOnboarding();
-    AnalyticsService.logOnboardingEvent('completed');
 
     if (mounted) {
-      context.go('/home');
+      final isEditMode = ref
+          .read(contextControllerProvider)
+          .hasCompletedOnboarding;
+      if (isEditMode) {
+        context.go('/home');
+      } else {
+        context.go('/onboarding/ai_consent');
+      }
     }
   }
 
@@ -71,11 +75,8 @@ class _ValuesScreenState extends ConsumerState<ValuesScreen> {
         actions: [
           if (!isEditMode)
             TextButton(
-              onPressed: () async {
-                await ref
-                    .read(contextControllerProvider.notifier)
-                    .completeOnboarding();
-                if (context.mounted) context.go('/home');
+              onPressed: () {
+                if (context.mounted) context.go('/onboarding/ai_consent');
               },
               child: const Text('Skip'),
             ),

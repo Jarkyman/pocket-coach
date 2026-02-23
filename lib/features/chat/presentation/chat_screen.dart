@@ -6,10 +6,8 @@ import 'package:go_router/go_router.dart';
 import '../../../shared/ui/app_scaffold.dart';
 import '../../../shared/ui/app_top_bar.dart';
 import '../../../shared/ui/app_text_field.dart';
-import '../../../shared/services/privacy_consent_service.dart';
 import '../../coaches/data/coach_repository.dart';
 import '../domain/chat_message.dart';
-import 'ai_consent_dialog.dart';
 import 'chat_controller.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
@@ -33,17 +31,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   Future<void> _handleSend() async {
     final text = _textController.text.trim();
     if (text.isEmpty) return;
-
-    final privacyService = ref.read(privacyConsentServiceProvider);
-    if (!privacyService.hasSeenConsent) {
-      final agreed = await showDialog<bool>(
-        context: context,
-        builder: (context) => const AIConsentDialog(),
-      );
-
-      if (agreed != true) return;
-      await privacyService.setConsentGiven();
-    }
 
     ref
         .read(

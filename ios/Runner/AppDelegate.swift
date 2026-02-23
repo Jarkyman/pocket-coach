@@ -2,14 +2,17 @@ import Flutter
 import UIKit
 
 @main
-@objc class AppDelegate: FlutterAppDelegate {
+@objc class AppDelegate: FlutterAppDelegate, FlutterImplicitEngineDelegate {
   override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+
+  func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     let themeChannel = FlutterMethodChannel(name: "com.hartvigsolutions.app/theme",
-                                              binaryMessenger: controller.binaryMessenger)
+                                              binaryMessenger: engineBridge.applicationRegistrar.messenger())
     
     themeChannel.setMethodCallHandler({
       (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
@@ -26,8 +29,7 @@ import UIKit
       }
     })
 
-    GeneratedPluginRegistrant.register(with: self)
-    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
   }
 
   private func applyTheme(_ theme: String) {
@@ -42,9 +44,13 @@ import UIKit
         style = .unspecified
       }
       
-      // Apply to all windows
-      if let window = self.window {
-          window.overrideUserInterfaceStyle = style
+      // Apply to all windows across all connected scenes
+      for scene in UIApplication.shared.connectedScenes {
+          if let windowScene = scene as? UIWindowScene {
+              for window in windowScene.windows {
+                  window.overrideUserInterfaceStyle = style
+              }
+          }
       }
     }
   }
