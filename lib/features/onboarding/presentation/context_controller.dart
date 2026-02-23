@@ -1,11 +1,16 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../data/context_repository.dart';
 import '../domain/user_context.dart';
 
-class ContextController extends StateNotifier<UserContext> {
-  final ContextRepository _repository;
+part 'context_controller.g.dart';
 
-  ContextController(this._repository) : super(_repository.getContext() ?? UserContext());
+@riverpod
+class ContextController extends _$ContextController {
+  @override
+  UserContext build() {
+    final repo = ref.watch(contextRepositoryProvider);
+    return repo.getContext() ?? UserContext();
+  }
 
   Future<void> saveContext({
     String? goals,
@@ -19,15 +24,16 @@ class ContextController extends StateNotifier<UserContext> {
       challenges: challenges ?? state.challenges,
       topics: topics ?? state.topics,
     );
-    
+
     state = newContext;
-    await _repository.saveContext(newContext);
+    final repo = ref.read(contextRepositoryProvider);
+    await repo.saveContext(newContext);
   }
 
   Future<void> toggleSavedCoach(String coachId) async {
     final currentSaved = state.savedCoachIds;
     final List<String> newSaved;
-    
+
     if (currentSaved.contains(coachId)) {
       newSaved = currentSaved.where((id) => id != coachId).toList();
     } else {
@@ -36,17 +42,14 @@ class ContextController extends StateNotifier<UserContext> {
 
     final newContext = state.copyWith(savedCoachIds: newSaved);
     state = newContext;
-    await _repository.saveContext(newContext);
+    final repo = ref.read(contextRepositoryProvider);
+    await repo.saveContext(newContext);
   }
 
   Future<void> completeOnboarding() async {
     final newContext = state.copyWith(hasCompletedOnboarding: true);
     state = newContext;
-    await _repository.saveContext(newContext);
+    final repo = ref.read(contextRepositoryProvider);
+    await repo.saveContext(newContext);
   }
 }
-
-final contextControllerProvider = StateNotifierProvider<ContextController, UserContext>((ref) {
-  final repo = ref.watch(contextRepositoryProvider);
-  return ContextController(repo);
-});

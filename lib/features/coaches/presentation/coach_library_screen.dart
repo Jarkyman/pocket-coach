@@ -65,7 +65,7 @@ class _CoachList extends ConsumerWidget {
       return ListView.separated(
         padding: const EdgeInsets.all(24),
         itemCount: coaches.length,
-        separatorBuilder: (_, __) => const Gap(16),
+        separatorBuilder: (_, _) => const Gap(16),
         itemBuilder: (context, index) {
           final coach = coaches[index];
           return _CoachCard(coach: coach)

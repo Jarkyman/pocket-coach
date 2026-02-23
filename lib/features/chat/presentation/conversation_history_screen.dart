@@ -47,7 +47,7 @@ class ConversationHistoryScreen extends ConsumerWidget {
             : ListView.separated(
                 padding: const EdgeInsets.all(16),
                 itemCount: conversations.length + 1, // +1 for the "Start New" button
-                separatorBuilder: (_, __) => const Gap(12),
+                separatorBuilder: (_, _) => const Gap(12),
                 itemBuilder: (context, index) {
                   if (index == 0) {
                     return AppCard(

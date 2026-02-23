@@ -3,7 +3,7 @@ PODS:
     - Flutter
   - Firebase/CoreOnly (12.8.0):
     - FirebaseCore (~> 12.8.0)
-  - firebase_analytics (12.1.1):
+  - firebase_analytics (12.1.2):
     - firebase_core
     - FirebaseAnalytics (= 12.8.0)
     - Flutter
@@ -100,20 +100,20 @@ PODS:
   - nanopb/decode (3.30910.0)
   - nanopb/encode (3.30910.0)
   - PromisesObjC (2.4.0)
-  - purchases_flutter (9.10.7):
+  - purchases_flutter (9.12.2):
     - Flutter
-    - PurchasesHybridCommon (= 17.28.1)
-  - purchases_ui_flutter (9.10.7):
+    - PurchasesHybridCommon (= 17.41.0)
+  - purchases_ui_flutter (9.12.2):
     - Flutter
-    - PurchasesHybridCommonUI (= 17.28.1)
-  - PurchasesHybridCommon (17.28.1):
-    - RevenueCat (= 5.55.2)
-  - PurchasesHybridCommonUI (17.28.1):
-    - PurchasesHybridCommon (= 17.28.1)
-    - RevenueCatUI (= 5.55.2)
-  - RevenueCat (5.55.2)
-  - RevenueCatUI (5.55.2):
-    - RevenueCat (= 5.55.2)
+    - PurchasesHybridCommonUI (= 17.41.0)
+  - PurchasesHybridCommon (17.41.0):
+    - RevenueCat (= 5.59.2)
+  - PurchasesHybridCommonUI (17.41.0):
+    - PurchasesHybridCommon (= 17.41.0)
+    - RevenueCatUI (= 5.59.2)
+  - RevenueCat (5.59.2)
+  - RevenueCatUI (5.59.2):
+    - RevenueCat (= 5.59.2)
   - url_launcher_ios (0.0.1):
     - Flutter
 
@@ -162,7 +162,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   connectivity_plus: cb623214f4e1f6ef8fe7403d580fdad517d2f7dd
   Firebase: 9a58fdbc9d8655ed7b79a19cf9690bb007d3d46d
-  firebase_analytics: b5a19eaf3e4bf4187b0815ef4850b8916e2bc549
+  firebase_analytics: a3285a9ab410456957496cdb659f00c1cf19a95f
   firebase_core: ee30637e6744af8e0c12a6a1e8a9718506ec2398
   FirebaseAnalytics: f20bbad8cb7f65d8a5eaefeb424ae8800a31bdfc
   FirebaseCore: 0dbad74bda10b8fb9ca34ad8f375fb9dd3ebef7c
@@ -174,12 +174,12 @@ SPEC CHECKSUMS:
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
-  purchases_flutter: ab44f120d5d2278734ce0ee156685ec41bea6521
-  purchases_ui_flutter: 50c9a4380e1fae335e5fb0ab61905b5ae78d97b1
-  PurchasesHybridCommon: 57e9e2fd474a726c41f61d5359f1bc05d89d9be8
-  PurchasesHybridCommonUI: ad685a661cc19fb45f1d7448f5890b399e177e14
-  RevenueCat: b5605778017c179315e60b8921ed158b3428688c
-  RevenueCatUI: ee8109669a5abf52df099788a0f961abdd2b5b09
+  purchases_flutter: 4d1eb4df39dc92f573069226fc6e2bafcfe3e929
+  purchases_ui_flutter: 2fad6c28a3adbaf45aa0b9b7cd69026dc9a0feec
+  PurchasesHybridCommon: 0fc10b0328a4dca5c607f845130e59f7427f4b69
+  PurchasesHybridCommonUI: b75fac3473827c68f7c3456919e5a0e18d81e5f1
+  RevenueCat: f352b3661288080bd8bf30bbb96e331940e73c88
+  RevenueCatUI: 5f7b3496a7fd7a16a254a6b78de2e221c117d9d2
   url_launcher_ios: 7a95fa5b60cc718a708b8f2966718e93db0cef1b
 
 PODFILE CHECKSUM: ce2a4dd764e1c7aeed6a7cdc5e61d092b6dc6d32

@@ -34,10 +34,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
     ref
         .read(
-          chatProvider((
+          chatControllerProvider(
             coachId: widget.coachId,
             conversationId: widget.conversationId,
-          )).notifier,
+          ).notifier,
         )
         .sendMessage(text);
     _textController.clear();
@@ -59,20 +59,20 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     final chatState = ref.watch(
-      chatProvider((
+      chatControllerProvider(
         coachId: widget.coachId,
         conversationId: widget.conversationId,
-      )),
+      ),
     );
     final coachesAsync = ref.watch(coachesProvider);
     final theme = Theme.of(context);
 
     // Auto-scroll on new message or typing state change
     ref.listen(
-      chatProvider((
+      chatControllerProvider(
         coachId: widget.coachId,
         conversationId: widget.conversationId,
-      )),
+      ),
       (previous, next) {
         if (previous?.messages.length != next.messages.length ||
             previous?.isTyping != next.isTyping) {
@@ -142,7 +142,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                       itemCount:
                           chatState.messages.length +
                           (chatState.isTyping ? 1 : 0),
-                      separatorBuilder: (_, __) => const Gap(16),
+                      separatorBuilder: (_, _) => const Gap(16),
                       itemBuilder: (context, index) {
                         // Logic for reversed list: 0 is bottom-most item
 
@@ -328,7 +328,7 @@ class _ChatInput extends StatelessWidget {
                   ),
                   scrollDirection: Axis.horizontal,
                   itemCount: quickPrompts.length,
-                  separatorBuilder: (_, __) => const Gap(8),
+                  separatorBuilder: (_, _) => const Gap(8),
                   itemBuilder: (context, index) {
                     final prompt = quickPrompts[index];
                     return ActionChip(

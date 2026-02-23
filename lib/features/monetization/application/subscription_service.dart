@@ -1,10 +1,13 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:pocket_coach/shared/services/analytics_service.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:purchases_ui_flutter/purchases_ui_flutter.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+part 'subscription_service.g.dart';
 
 enum SubscriptionStatus { free, pro, loading }
 
@@ -141,29 +144,24 @@ final subscriptionServiceProvider = Provider<SubscriptionService>((ref) {
   return SubscriptionService();
 });
 
-final subscriptionStatusProvider =
-    StateNotifierProvider<SubscriptionStatusNotifier, SubscriptionStatus>((
-      ref,
-    ) {
-      final service = ref.watch(subscriptionServiceProvider);
-      return SubscriptionStatusNotifier(service);
-    });
-
-class SubscriptionStatusNotifier extends StateNotifier<SubscriptionStatus> {
-  final SubscriptionService _service;
-
-  SubscriptionStatusNotifier(this._service)
-    : super(SubscriptionStatus.loading) {
-    _init();
+@Riverpod(keepAlive: true)
+class SubscriptionStatusNotifier extends _$SubscriptionStatusNotifier {
+  @override
+  SubscriptionStatus build() {
+    // Schedule init after build completes
+    Future.microtask(() => _init());
+    return SubscriptionStatus.loading;
   }
 
   Future<void> _init() async {
-    await _service.init();
+    final service = ref.read(subscriptionServiceProvider);
+    await service.init();
     await refreshStatus();
   }
 
   Future<void> refreshStatus() async {
-    state = await _service.getSubscriptionStatus();
+    final service = ref.read(subscriptionServiceProvider);
+    state = await service.getSubscriptionStatus();
   }
 
   void setProForTesting(bool isPro) {

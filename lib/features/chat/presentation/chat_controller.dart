@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:dart_openai/dart_openai.dart';
 import '../../coaches/data/coach_repository.dart';
 import '../../onboarding/presentation/context_controller.dart';
@@ -8,6 +9,8 @@ import '../domain/chat_message.dart';
 import '../domain/conversation.dart';
 import '../../monetization/application/subscription_service.dart';
 import '../../monetization/application/monetization_config.dart';
+
+part 'chat_controller.g.dart';
 
 // State for Chat
 class ChatState {
@@ -22,23 +25,13 @@ class ChatState {
   });
 }
 
-class ChatController extends StateNotifier<ChatState> {
-  final String coachId;
-  final String conversationId;
-  final Ref ref;
-
-  ChatController({
-    required this.coachId,
-    required this.conversationId,
-    required this.ref,
-  }) : super(ChatState(messages: [])) {
-    _loadMessages();
-  }
-
-  void _loadMessages() {
+@riverpod
+class ChatController extends _$ChatController {
+  @override
+  ChatState build({required String coachId, required String conversationId}) {
     final repo = ref.read(chatRepositoryProvider);
     final messages = repo.getMessages(conversationId);
-    state = ChatState(messages: messages);
+    return ChatState(messages: messages);
   }
 
   void sendMessage(String text) async {
@@ -154,19 +147,6 @@ Rules: 1. Conversational. 2. No principle headers. 3. Concise. 4. One thing at a
     );
   }
 }
-
-final chatProvider =
-    StateNotifierProvider.family<
-      ChatController,
-      ChatState,
-      ({String coachId, String conversationId})
-    >(
-      (ref, arg) => ChatController(
-        coachId: arg.coachId,
-        conversationId: arg.conversationId,
-        ref: ref,
-      ),
-    );
 
 final conversationsProvider = StreamProvider.family<List<Conversation>, String>(
   (ref, coachId) {
